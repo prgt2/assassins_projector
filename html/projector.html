@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassins shop</title>
+    <script src="https://kit.fontawesome.com/ac78c436d6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_small.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/shop.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <!-- niewidoczne na mobile -->
+        </div>
+        <div class="logo">
+            <a href="">
+                <img src="../gfx/logo.png" alt="Logotyp sklepu Assassins">
+            </a>
+        </div>
+        <form class="search">
+            <i id="search_id" class="search_icon"></i>
+            <div class="search_cont">
+                <input class="search_input" type="text" placeholder="  Wpisz czego szukasz...">
+                <div class="close_cont">
+                    <i class="close_ico"></i>
+                </div>
+            </div>
+            <!-- klasa będzie zmieniała się tylko na mobile -->
+            <button type="submit">
+                <!-- niewidoczne na desktop -->
+                <i class="search_icon"></i>
+            </button>
+        </form>
+        <div class="login_desktop">
+            <!-- niewidoczne na mobile -->
+            Twoje konto
+        </div>
+        <div class="basket">
+            <a href="" class="basket_icon"></a>
+        </div>
+        <div class="hamburger">
+            <!-- niewidoczne na desktop -->
+            <i class="hamburger_icon"></i>
+        </div>
+        <nav class="nav_mobile">
+            <!-- niewidoczne na desktop -->
+            <ul class="menu1">
+                <li class="lvl1">
+                    <button>
+                        <a href="">Gotowe zestawy do gry</a>
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Podkategoria 1</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 2</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 3</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        <a href="">Sprzęt</a>
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Podkategoria 1</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 2</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 3</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        <a href="">Odzież</a>
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Podkategoria 1</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 2</button>
+                        </li>
+                        <li>
+                            <button>Podkategoria 3</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        <a href="">Kulki</a>
+                    </button>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        <a href="">Wyprzedaże</a>
+                    </button>
+                </li>
+            </ul>
+            <ul class="">
+                <li class="lvl1">
+                    <button>
+                        Moje konto
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Zarejestruj się</button>
+                        </li>
+                        <li>
+                            <button>Zaloguj</button>
+                        </li>
+                        <li>
+                            <button>Koszyk</button>
+                        </li>
+                        <li>
+                            <button>Ulubione</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        Moje zamówienia
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Sprawdź status zamówienia</button>
+                        </li>
+                        <li>
+                            <button>Śledź przesyłkę</button>
+                        </li>
+                        <li>
+                            <button>Reklamacje</button>
+                        </li>
+                        <li>
+                            <button>Zwroty</button>
+                        </li>
+                        <li>
+                            <button>Informacje o wymianie</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1">
+                    <button>
+                        Informacje o sklepie
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>Dane sklepu</button>
+                        </li>
+                        <li>
+                            <button>Wysyłka</button>
+                        </li>
+                        <li>
+                            <button>Regulamin</button>
+                        </li>
+                        <li>
+                            <button>Polityka prywatności</button>
+                        </li>
+                        <li>
+                            <button>Odstąpienie od ummowy</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1 contact">
+                    <button>
+                        Kontakt
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li>
+                            <button>+48 574 046 421</button>
+                            <i class="tel_icon"></i>
+                        </li>
+                        <li>
+                            <button>kontakt@assasinarmy.pl</button>
+                            <i class="mail_icon"></i>
+                        </li>
+                        <li>
+                            <button>Facebook</button>
+                            <i class="fb_icon"></i>
+                        </li>
+                        <li>
+                            <button>Instagram</button>
+                            <i class="ig_icon"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lvl1 language">
+                    <button>
+                        Język i waluta:
+                        <span class="polski"></span>
+                        <span class="pln">PLN</span>
+                        <i class="collapisble_icon"></i>
+                    </button>
+                    <ul class="collapsible">
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav_desktop">
+            <ul>
+                <li></li>
+            </ul>
+        </nav>
+        <div class="breadcrumbs">
+            <!-- niewidoczne na mobile -->
+            <ol>
+                <li></li>
+            </ol>
+        </div>
+    </header>
+    <div class="layout">
+        <div class="projector1">
+            <div class="pics">
+                <div class="gallery"></div>
+                <!-- niewidoczne na mobile - zastąpić sliderem -->
+                <div class="gallery_mobile">
+                    <!-- może da się zmergować z .gallery -->
+                    <img src="../gfx/product_pic.png" alt="" id="product_pic_active" class="">
+                    <img src="../gfx/product_pic2.png" alt="" id="" class="">
+                    <img src="../gfx/product_pic3.png" alt="" id="" class="">
+                    <i class="lt_icon"></i>
+                    <i class="gt_icon"></i>
+                </div>
+                <div class="bullets">
+                    <span id="0" class="dot dot_active"></span>
+                    <span id="1" class="dot"></span>
+                    <span id="2" class="dot"></span>
+                </div>
+            </div>
+            <div class="product_info">
+                <h1 class="product_name">
+                    MARKER TIPPMANN FT- 50 LITE 50 CAL RENTAL (BLACK)
+                </h1>
+                <div class="product_versions_header">Warianty:</div>
+                <div class="product_versions">
+                    <div class="active">
+                        <a href=""><img src="../gfx/variant1.png" alt=""></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="../gfx/variant2.png" alt=""></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="../gfx/variant3.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="select1">
+                    <label for="length_select">Długość lufy:</label>
+                    <div>
+                        <select name="Długości" id="length_select">
+                        <option value="120">120 cm</option>
+                    </select>
+                    </div>
+                    <label for="caliber">Kaliber:</label>
+                    <div>
+                        <select name="Kalibry" id="caliber_select">
+                        <option value="55">55NU</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="price_box">
+                    <strong class="price">1278,00 zł</strong>
+                    <div class="old_price_cont">
+                        <del class="old_price">1499,00 zł</del>
+                        <div class="yousave">Taniej o 221,00 zł</div>
+                    </div>
+                </div>
+                <div class="basket_add_cont">
+                    <div><button class="basket_add">Dodaj do koszyka</button></div>
+                </div>
+                <div class="benefits_cont">
+                    <ul class="benefits">
+                        <li class="benefit">
+                            <img src="../gfx/delivery_icon.png" alt="">
+                            <div><b>Darmowa dostawa</b><span>dla zamówień powyżej  600 zł</span></div>
+                        </li>
+                        <li class="benefit">
+                            <img src="../gfx/percent_icon.png" alt="">
+                            <div><b>zakupy na raty</b><span>oblicz ratę >></span></div>
+                        </li>
+                        <li class="benefit">
+                            <img src="../gfx/return_icon.png" alt="">
+                            <div><b>ZWROT TOWARU</b><span>do 14 dni od daty zakupu</span></div>
+                        </li>
+                        <li class="benefit">
+                            <img src="../gfx/medal_icon.png" alt="">
+                            <div><b>GWARANCJA 12 miesięcy</b><span></span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hotspot"></div>
+        <div class="projector2">
+            <div class="description"> Marker Firmy Tippmann stworzony z myślą o młodszych graczach, poprzez zmiejszenie kalubru do 50Cal. FT-50 Lite wygladem przypomina marker FT-12 , jednak rózni się on trochę od swojego pierwowzoru. Marker jest trochę krótszy, korpus ma bardziej
+                agresywny charakter, średnica zewnętrzna oraz wewnętrzna lufy jest mniejsza oraz średnica otworu podającego kulki w magazynku grawitacyjnym jest dostosowana do kalubru 50Cal. kompaktowy militarny wygląd szybkie serwisowanie bez użycia
+                narzędzi aluminiowy chwyt i body wewnętrzny system gazowy "inline bolt system" modułowa konstrukcja stałe przyrządy celownicze Zestaw zawiera magazynek grawitacyjny oraz barrel bag (osłona lufy)
+
+            </div>
+            <div class="dictionary"></div>
+        </div>
+        <div class="projector3">
+            <div class="hints">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat
+                sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit,
+                non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies
+                eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi.
+                Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo
+                eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum
+                posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque
+                consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur
+                elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies
+                eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi.
+                Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo
+                eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum
+                posuere. </div>
+        </div>
+    </div>
+    <footer>
+        <div class="menu">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="bottom"></div>
+    </footer>
+</body>
+
+</html>
