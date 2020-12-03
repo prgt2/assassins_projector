@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -477,7 +481,6 @@ select {
 .hotspot_carousel {
     position: relative;
     width: 75%;
-    height: 140px;
     margin: auto;
     /* centruje div w divie */
 }
@@ -485,12 +488,20 @@ select {
 .hotspot_carousel .item {
     position: absolute;
     display: flex;
-    justify-items: center;
+    justify-content: space-evenly;
     z-index: 0;
     opacity: 0;
+    transition: all 2s ease;
 }
 
 .hotspot_carousel .item.active {
+    position: relative;
     z-index: 1;
     opacity: 1;
+}
+
+.product_name,
+.product_price {
+    vertical-align: middle;
+    margin: 0;
 }
