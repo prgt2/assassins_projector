@@ -41,7 +41,7 @@ a {
 
 i {
     font-style: normal;
-    font-size: 1.35em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
@@ -362,6 +362,7 @@ select {
     margin: 5px 0 5px 0;
     padding: 5px;
     background: linear-gradient(to bottom, #dbdbdb 0%, #bebebe 100%);
+    cursor: pointer;
 }
 
 .price_box {
@@ -467,6 +468,13 @@ select {
     text-transform: uppercase;
 }
 
+
+/* .arrow_icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+} */
+
 .hotspot_name img {
     display: inline-block;
     vertical-align: middle;
@@ -479,10 +487,17 @@ select {
 }
 
 .hotspot_carousel {
+    display: flex;
     position: relative;
-    width: 75%;
     margin: auto;
     /* centruje div w divie */
+    justify-content: center;
+    align-items: center;
+}
+
+.hotspot_carousel i {
+    padding: 11px;
+    font-size: 1.5em;
 }
 
 .hotspot_carousel .item {
@@ -492,6 +507,7 @@ select {
     z-index: 0;
     opacity: 0;
     transition: all 2s ease;
+    cursor: pointer;
 }
 
 .hotspot_carousel .item.active {
@@ -500,8 +516,18 @@ select {
     opacity: 1;
 }
 
-.product_name,
+.item img {
+    padding: 11px 11px 11px 0;
+}
+
+.info_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
 .product_price {
-    vertical-align: middle;
     margin: 0;
+    color: #ce2e2a
 }
