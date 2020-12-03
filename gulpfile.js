@@ -1,29 +1,31 @@
 var gulp = require('gulp')
-var uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
-var csso = require('gulp-csso');
-var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify')
+var pipeline = require('readable-stream').pipeline
+var csso = require('gulp-csso')
+var autoprefixer = require('gulp-autoprefixer')
 var htmlmin = require('gulp-htmlmin')
+var browserSync = require('browser-sync').create()
+var reload = browserSync.reload
 
 gulp.task('compress', function() {
     return pipeline(
         gulp.src('./js/*.js'),
         uglify(),
         gulp.dest('./')
-    );
-});
+    )
+})
 
 gulp.task('styles', function() {
     return gulp.src('./css/*.css')
         .pipe(csso())
         .pipe(gulp.dest('./css'))
-});
+})
 
 gulp.task('scripts', function() {
     return gulp.src('./js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./js'))
-});
+})
 
 gulp.task('pages', function() {
     return gulp.src(['./html/*.html'])
@@ -31,5 +33,5 @@ gulp.task('pages', function() {
             collapseWhitespace: true,
             removeComments: true
         }))
-        .pipe(gulp.dest('./html'));
-});
+        .pipe(gulp.dest('./html'))
+})
