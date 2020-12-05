@@ -45,6 +45,10 @@ i {
     cursor: pointer;
 }
 
+i:hover {
+    color: #ce2e2a;
+}
+
 i:hover::before {
     color: #ce2e2a;
 }
@@ -78,7 +82,6 @@ form {
 }
 
 .search_input {
-    border-style: border-box;
     height: 46px;
     width: 100%;
     padding: 0;
@@ -204,7 +207,7 @@ ul {
     font-family: FontAwesome;
     color: #333333;
     float: right;
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 .collapisble_icon.rotated::after {
@@ -437,6 +440,8 @@ select {
 
 .benefit>img {
     padding: 11px;
+    height: 30px;
+    width: 30px;
 }
 
 .benefit>div {
@@ -452,30 +457,30 @@ select {
 
 .benefit a {
     color: #ce2e2a;
+    text-transform: uppercase;
 }
 
 .benefit a:hover {
     color: #333333;
 }
 
-.hotspot_name {
+.hotspot_name,
+.desc_name,
+.dict_name {
     height: 32px;
     padding: 5px 0 5px 0;
 }
 
-.hotspot_name span {
+.hotspot_name span,
+.desc_name span,
+.dict_name span {
     line-height: 32px;
     text-transform: uppercase;
 }
 
-
-/* .arrow_icon {
-    display: inline-block;
-    width: 23px;
-    height: 23px;
-} */
-
-.hotspot_name img {
+.hotspot_name img,
+.desc_name img,
+.dict_name img {
     display: inline-block;
     vertical-align: middle;
     /* środkuje img w spanie (inline_block + vertical-align */
@@ -488,7 +493,6 @@ select {
 
 .hotspot_carousel {
     display: flex;
-    position: relative;
     margin: auto;
     /* centruje div w divie */
     justify-content: center;
@@ -500,11 +504,16 @@ select {
     font-size: 1.5em;
 }
 
+.items {
+    position: relative;
+}
+
 .hotspot_carousel .item {
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-evenly;
-    z-index: 0;
+    z-index: -1;
     opacity: 0;
     transition: all 2s ease;
     cursor: pointer;
@@ -530,4 +539,27 @@ select {
 .product_price {
     margin: 0;
     color: #ce2e2a
+}
+
+.dict {
+    display: flex;
+    flex-direction: column;
+}
+
+.param {
+    display: flex;
+}
+
+.param_name {
+    flex-grow: 1;
+}
+
+.param_name::after {
+    content: ':';
+}
+
+.param_value {
+    margin: auto;
+    /* centruje anchor linka pionowo */
+    flex-grow: 2;
 }

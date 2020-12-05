@@ -10,7 +10,7 @@
     function hideAll() {
         $('.nav_mobile').toggleClass('open')
         $('.layout').toggleClass('open')
-        $('.collapsible').hide('slow')
+        $('.collapsible').hide('fast')
         $('.collapisble_icon').removeClass('rotated')
     }
 
@@ -28,10 +28,10 @@
     $('.lvl1').on('click', function() {
         $('.collapisble_icon').removeClass('rotated')
         if ($(this).children('.collapsible').is(':visible')) {
-            $('.collapsible').hide('slow')
+            $('.collapsible').slideUp()
         } else {
-            $('.collapsible').hide('slow')
-            $(this).children('.collapsible').show('slow')
+            $('.collapsible').slideUp()
+            $(this).children('.collapsible').slideDown()
             $(this).find('.collapisble_icon').toggleClass('rotated')
         }
     })
@@ -58,7 +58,7 @@
         $(dots[index]).toggleClass('dot_active').siblings().removeClass('dot_active')
     }
 
-    /* eventy do strzałek i kropek */
+    /* eventy do strzałek i kropek w sliderze*/
     $('.lt_icon').on('click', () => changeSlide(-1))
     $('.gt_icon').on('click', () => changeSlide(1))
     $('.dot').on('click', function() {
@@ -67,4 +67,24 @@
             changeSlide(false, id)
         }
     })
+
+    /* zmienianie zdjęć w hotspocie */
+    let indexHotspot = 0
+    let hotspot = $('.item')
+
+    function changeHotspot(a) {
+        if (a + indexHotspot > hotspot.length - 1) {
+            indexHotspot = 0
+        } else if (a + indexHotspot < 0) {
+            indexHotspot = hotspot.length - 1
+        } else {
+            indexHotspot = indexHotspot += a
+        }
+        $(hotspot[indexHotspot]).addClass('active').siblings().removeClass('active')
+
+    }
+
+    /* event do strzałek w hotspocie */
+    $('.lt_hot').click(() => changeHotspot(-1))
+    $('.gt_hot').click(() => changeHotspot(1))
 })();
