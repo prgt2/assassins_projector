@@ -475,6 +475,7 @@ select {
 .desc_name span,
 .dict_name span {
     line-height: 32px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -546,12 +547,19 @@ select {
     flex-direction: column;
 }
 
+.param:nth-child(odd) {
+    background: #eaeaea;
+}
+
 .param {
     display: flex;
+    justify-content: left;
 }
 
 .param_name {
-    flex-grow: 1;
+    width: 50%;
+    max-width: 373px;
+    padding: 0 5px 0 5px;
 }
 
 .param_name::after {
@@ -559,7 +567,13 @@ select {
 }
 
 .param_value {
-    margin: auto;
+    width: 50%;
+    margin: auto 0 auto 5px;
+    padding: 0 5px 0 5px;
     /* centruje anchor linka pionowo */
-    flex-grow: 2;
+    font-weight: bold;
+}
+
+.param_value:hover {
+    color: #ce2e2a;
 }
