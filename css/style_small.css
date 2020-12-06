@@ -313,6 +313,7 @@ li>button {
 .product_info .product_name {
     text-align: center;
     font-size: 1.25em;
+    text-transform: uppercase;
 }
 
 .product_versions {
