@@ -104,4 +104,24 @@
                 .toggleClass('.params--hidden')
         }
     })
+
+    /* ukrywanie pytań */
+    $('.questions__question--hidden').children('.questions__question-text').hide(1)
+    $('.questions__question').click(function() {
+        if ($(this).hasClass('questions__question--hidden')) {
+            $('.questions__question-text')
+                .slideUp('slow')
+            $(this).toggleClass('questions__question--hidden')
+            $(this).children('.questions__question-text')
+                .slideDown('slow')
+            $(this).children('.question__arrow-icon')
+                .toggleClass('question__arrow-icon--rotated')
+        } else {
+            $(this).toggleClass('questions__question--hidden')
+            $(this).children('.questions__question-text')
+                .slideUp('slow')
+            $(this).children('.question__arrow-icon')
+                .toggleClass('question__arrow-icon--rotated')
+        }
+    })
 })();

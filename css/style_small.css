@@ -96,8 +96,6 @@ form {
     cursor: pointer;
 }
 
-.close_ico {}
-
 .close_ico::before {
     content: "\f00d";
     font-family: FontAwesome;
@@ -210,7 +208,8 @@ ul {
     transition: all 0.4s;
 }
 
-.collapisble_icon.rotated::after {
+.collapisble_icon.rotated::after,
+.question__arrow-icon--rotated {
     transform: rotate(-180deg);
     color: #ce2e2a;
 }
@@ -399,13 +398,10 @@ select {
     font-size: 2.5em;
 }
 
-.basket_add_cont {
-    padding: 5px 0 5px 0;
-}
-
-.basket_add {
+.red-button {
     width: 100%;
     height: 47.5px;
+    margin: 5px 0 5px 0;
     border: none;
     cursor: pointer;
     font-family: inherit;
@@ -417,7 +413,7 @@ select {
     background: url(../gfx/add_to_basket_background.png);
 }
 
-.basket_add:hover {
+.red-button:hover {
     background: #000000;
 }
 
@@ -555,6 +551,38 @@ select {
     color: #ce2e2a
 }
 
+.description__text {
+    padding: 5px 0 5px 0;
+}
+
+.questions__name {
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.questions__question-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.questions__question-title:hover {
+    color: #ce2e2a;
+}
+
+.questions__question-text {
+    padding: 5px 0 5px 0;
+}
+
+.questions__custom-question {
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .dictionary__name:hover {
     cursor: pointer;
 }
@@ -563,6 +591,10 @@ select {
     display: flex;
     flex-direction: column;
     padding: 5px 0 5px 0;
+}
+
+.params--hidden {
+    display: none;
 }
 
 .params__parameter:nth-child(odd) {
