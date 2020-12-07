@@ -439,6 +439,10 @@ select {
     text-align: left;
 }
 
+.benefit:hover {
+    background: #ffffff;
+}
+
 .benefit>img {
     padding: 11px;
     height: 30px;
@@ -466,27 +470,35 @@ select {
 }
 
 .hotspot_name,
-.desc_name,
-.dict_name {
+.description__name,
+.dictionary__name {
     height: 32px;
     padding: 5px 0 5px 0;
 }
 
 .hotspot_name span,
-.desc_name span,
-.dict_name span {
+.description__name span,
+.dictionary__name span {
     line-height: 32px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .hotspot_name img,
-.desc_name img,
-.dict_name img {
+.description__name img,
+.dictionary__name img {
     display: inline-block;
     vertical-align: middle;
     /* środkuje img w spanie (inline_block + vertical-align */
 }
+
+
+/* .dictionary__name>span.arrow_icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+}
+ */
 
 .item img {
     height: 80px;
@@ -543,31 +555,40 @@ select {
     color: #ce2e2a
 }
 
-.dict {
-    display: flex;
-    flex-direction: column;
+.dictionary__name:hover {
+    cursor: pointer;
 }
 
-.param:nth-child(odd) {
+.params {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 5px 0;
+}
+
+.params__parameter:nth-child(odd) {
     background: #eaeaea;
 }
 
-.param {
+.params__parameter {
     display: flex;
     justify-content: left;
 }
 
-.param_name {
+.params__parameter:hover {
+    background: #dbdbdb;
+}
+
+.params__parameter-name {
     width: 50%;
     max-width: 373px;
     padding: 0 5px 0 5px;
 }
 
-.param_name::after {
+.params__parameter-name::after {
     content: ':';
 }
 
-.param_value {
+.params__parameter-value {
     width: 50%;
     margin: auto 0 auto 5px;
     padding: 0 5px 0 5px;
@@ -575,6 +596,14 @@ select {
     font-weight: bold;
 }
 
-.param_value:hover {
+.params__parameter-value:hover {
     color: #ce2e2a;
+}
+
+.separator {
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin: 5px 0 5px 0;
+    background: #bebebe;
 }

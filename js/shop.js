@@ -54,8 +54,12 @@
         } else {
             index = b
         }
-        $(slides[index]).attr('id', 'product_pic_active').siblings().removeAttr('id')
-        $(dots[index]).toggleClass('dot_active').siblings().removeClass('dot_active')
+        $(slides[index])
+            .attr('id', 'product_pic_active')
+            .siblings().removeAttr('id')
+        $(dots[index])
+            .toggleClass('dot_active').siblings()
+            .removeClass('dot_active')
     }
 
     /* eventy do strzałek i kropek w sliderze*/
@@ -87,4 +91,17 @@
     /* event do strzałek w hotspocie */
     $('.lt_hot').click(() => changeHotspot(-1))
     $('.gt_hot').click(() => changeHotspot(1))
+
+    /* ukrywanie parametrów */
+    $('.dictionary__name').click(() => {
+        if ($('.params').hasClass('.params--hidden')) {
+            $('.params')
+                .slideDown('slow')
+                .toggleClass('.params--hidden')
+        } else {
+            $('.params')
+                .slideUp('slow')
+                .toggleClass('.params--hidden')
+        }
+    })
 })();
