@@ -19,36 +19,36 @@
             <!-- niewidoczne na mobile -->
         </div>
         <div class="logo">
-            <a href="">
-                <img src="../gfx/logo.png" alt="Logotyp sklepu Assassins">
+            <a href="" class="logo__link">
+                <img src="../gfx/logo.png" class="logo__pic" alt="Logotyp sklepu Assassins">
             </a>
         </div>
         <form class="search">
-            <i id="search_id" class="search_icon"></i>
-            <div class="search_cont">
-                <input class="search_input" type="text" placeholder="  Wpisz czego szukasz...">
-                <div class="close_cont">
-                    <i class="close_ico"></i>
+            <i class="search__icon search__icon--mobile"></i>
+            <div class="search__container">
+                <input class="search__input" type="text" placeholder="  Wpisz czego szukasz...">
+                <div class="search__close-container">
+                    <i class="close-icon"></i>
                 </div>
             </div>
             <!-- klasa będzie zmieniała się tylko na mobile -->
             <button type="submit">
                 <!-- niewidoczne na desktop -->
-                <i class="search_icon"></i>
+                <i class="search__icon"></i>
             </button>
         </form>
-        <div class="login_desktop">
+        <div class="login-desktop">
             <!-- niewidoczne na mobile -->
             Twoje konto
         </div>
         <div class="basket">
-            <a href="" class="basket_icon"></a>
+            <a href="" class="basket__icon"></a>
         </div>
         <div class="hamburger">
             <!-- niewidoczne na desktop -->
-            <i class="hamburger_icon"></i>
+            <i class="hamburger__icon"></i>
         </div>
-        <nav class="nav_mobile">
+        <nav class="navigation-mobile">
             <!-- niewidoczne na desktop -->
             <ul class="menu1">
                 <li class="lvl1">
@@ -351,11 +351,11 @@
             </div>
         </div>
         <div class="hotspot">
-            <div class="hotspot_name">
-                <span class="arrow_icon">
-                    <img src="../gfx/arrow_icon.png" alt="ikona strzałki Assassins">
+            <div class="hotspot__name">
+                <span class="arrow-icon">
+                    <img src="../gfx/arrow_icon.png" class="arrow-icon__icon" alt="ikona strzałki Assassins">
                 </span>
-                <span class="title">Dobierz do kompletu</span>
+                <span class="section-title">Dobierz do kompletu</span>
             </div>
             <div class="hotspot_carousel">
                 <i class="fas fa-angle-left lt_hot"></i>
@@ -389,10 +389,10 @@
         <div class="projector2">
             <div class="description">
                 <div class="description__name">
-                    <span class="arrow_icon">
-                        <img src="../gfx/arrow_icon.png" alt="ikona strzałki Assassins">
+                    <span class="arrow-icon">
+                        <img src="../gfx/arrow_icon.png" class="arrow-icon__icon" alt="ikona strzałki Assassins">
                     </span>
-                    <span class="title">Marker firmy Tippmann</span>
+                    <span class="section-title">Marker firmy Tippmann</span>
                 </div>
                 <div class="description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat
                     sapien in lacus condimentum posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur
@@ -403,22 +403,22 @@
             <div class="separator"></div>
             <div class="questions">
                 <div class="questions__name">
-                    <span class="title">Nasi klienci pytali o:</span>
+                    <span class="section-title">Nasi klienci pytali o:</span>
                 </div>
                 <ul class="questions__list">
-                    <li class="questions__question">
+                    <li class="questions__question questions__question--open">
                         <div class="questions__question-title">Czy ten pistolet jest idealny do gry w paintballa?
                             <span class="question__arrow-icon question__arrow-icon--rotated">
                                 <i class="fas fa-chevron-down"></i>
                             </span>
                         </div>
                         <div class="separator"></div>
-                        <div class="questions__question-text">
+                        <div class="questions__question-text questions__question-text--open">
                             Zwane popularnie "długimi wiatrówkami" świetnie nadają sę do precyzyjnego strzelania na dłuższe dystanse (powyżej 15-20 metrów). Mają większą moc niż wiatrówki pistolety, dłuższą lufę i z tego też wzgędu są zdecydowanie bardziej celne. Wystrzeliwany z
                             nich śrut ma również większe możliwości przebijania celu.
                         </div>
                     </li>
-                    <li class="questions__question questions__question--hidden">
+                    <li class="questions__question">
                         <div class="questions__question-title">Czy ten model posiada mechanizm spustowy?
                             <span class="question__arrow-icon">
                                 <i class="fas fa-chevron-down"></i>
@@ -427,7 +427,7 @@
                         <div class="separator"></div>
                         <div class="questions__question-text">Tak</div>
                     </li>
-                    <li class="questions__question questions__question--hidden">
+                    <li class="questions__question">
                         <div class="questions__question-title">Jakie naboje dobrać do tego sprzętu?
                             <span class="question__arrow-icon">
                                 <i class="fas fa-chevron-down"></i>
@@ -436,7 +436,7 @@
                         <div class="separator"></div>
                         <div class="questions__question-text">Średnie marki Tippmann</div>
                     </li>
-                    <li class="questions__question questions__question--hidden">
+                    <li class="questions__question">
                         <div class="questions__question-title">Nie mogę znaleźć instrukcji, czy mi ją doślecie?
                             <span class="question__arrow-icon">
                                 <i class="fas fa-chevron-down"></i>
@@ -453,10 +453,10 @@
             </div>
             <div class="dictionary">
                 <div class="dictionary__name">
-                    <span class="arrow_icon">
-                        <img src="../gfx/arrow_icon.png" alt="ikona strzałki Assassins ">
+                    <span class="arrow-icon">
+                        <img src="../gfx/arrow_icon.png" class="arrow-icon__icon" alt="ikona strzałki Assassins ">
                     </span>
-                    <span class="title">Parametry</span>
+                    <span class="section-title">Parametry</span>
                 </div>
                 <div class="separator"></div>
                 <div class="params">
@@ -496,7 +496,28 @@
             </div>
         </div>
         <div class="projector3">
-            <div class="hints"></div>
+            <div class="hints">
+                <div class="hints__name">
+                    <span class="arrow-icon">
+                        <img src="../gfx/arrow_icon.png" class="arrow-icon__icon" alt="ikona strzałki Assassins ">
+                    </span>
+                    <span class="section-title">Porady naszego eksperta</span>
+                </div>
+                <div class="hints__hint">
+                    <div class="hints__hint-title">Jak stworzyć samemu farby do gry?</div>
+                    <img src="../gfx/person_with_gun1_pic.png" alt="zdjęcie osoby z pistoletem do artykułu" class="hints__hint-pic">
+                    <div class="hints__hint-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iste id nostrum odio quas at, vitae hic cumque et explicabo nihil ipsa sed obcaecati impedit laudantium perspiciatis porro, repudiandae minus.
+                    </div>
+                </div>
+                <div class="hints__hint">
+                    <div class="hints__hint-title">Jak dobrać naboje z farbą do mojego sprzętu?</div>
+                    <img src="../gfx/person_with_gun2_pic.png" alt="zdjęcie osoby z pistoletem do artykułu" class="hints__hint-pic">
+                    <div class="hints__hint-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur esse alias magnam libero, provident fuga aspernatur recusandae. Explicabo, nisi laborum natus eligendi omnis qui cupiditate repellendus reiciendis minima facere alias?
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
