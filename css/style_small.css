@@ -1,3 +1,7 @@
+:root {
+    --max-width-mobile: 600px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -253,13 +257,13 @@ li>button {
 
 .gallery_mobile {
     position: relative;
-    margin: 15px 0 11px 0;
+    max-width: var(--max-width-mobile);
+    margin: 15px auto 11px auto;
     z-index: 0;
 }
 
 .pics>div>img {
     width: 80%;
-    max-width: 512px;
     margin: auto;
     display: none;
 }
@@ -310,6 +314,15 @@ li>button {
     background-color: #333333;
 }
 
+.product_info,
+.hotspot,
+.projector2,
+.projector3,
+footer {
+    max-width: var(--max-width-mobile);
+    margin: auto;
+}
+
 .product_info .product_name {
     text-align: center;
     font-size: 1.25em;
@@ -320,6 +333,7 @@ li>button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 5px 0;
 }
 
 .product_versions_header {
@@ -363,7 +377,7 @@ select {
     border: none;
     border-radius: 5px;
     width: 100%;
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
     padding: 5px;
     background: linear-gradient(to bottom, #dbdbdb 0%, #bebebe 100%);
     cursor: pointer;
@@ -402,7 +416,7 @@ select {
 .red-button {
     width: 100%;
     height: 47.5px;
-    margin: 5px 0 5px 0;
+    margin: 5px auto;
     border: none;
     cursor: pointer;
     font-family: inherit;
@@ -625,4 +639,39 @@ select {
     height: 1px;
     margin: 5px 0 5px 0;
     background: #bebebe;
+}
+
+.hints__hint {
+    display: flex;
+    flex-direction: column;
+}
+
+.hints__hint-title {
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.hints__hint-pic {
+    margin: 5px auto;
+}
+
+.hints__hint-text {
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.bottom__background {
+    display: none;
+    margin: auto;
+}
+
+.bottom__idosell-logo {
+    display: block;
+    margin: 5px auto;
+    padding: 5px 0;
 }

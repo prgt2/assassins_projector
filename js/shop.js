@@ -110,7 +110,8 @@
     })
 
     /* ukrywanie pytań */
-    $('.questions__question-text:not(.questions__question-text--open)').slideDown('fast')
+    $('.questions__question-text:not(.questions__question-text--open)')
+        .slideDown('fast')
     $('.questions__question').click(function() {
         $(this).siblings('.questions__question--open')
             .toggleClass('questions__question--open')
