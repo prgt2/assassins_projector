@@ -1,5 +1,9 @@
 :root {
     --max-width-mobile: 600px;
+    --max-width-desktop: 1170px;
+    --main-red: #ce2e2a;
+    --main-font-color: #333333;
+    --alt-font-color: #ffffff;
 }
 
 html {
@@ -18,22 +22,89 @@ body {
     hyphens: auto;
 }
 
-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #eaeaea url(../gfx/header_background.png);
-}
-
 a {
     text-decoration: none;
     color: #333333;
 }
 
+i:not(.top__icon) {
+    /* naprawić to!!! nadać osobne klasy layout__icon */
+    font-style: normal;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+i:hover {
+    color: var(--main-red);
+}
+
+
+/* to też naprawić, zamienić befory na i */
+
+i:hover::before {
+    color: var(--main-red);
+}
+
+header {
+    position: relative;
+    background: #eaeaea url(../gfx/header_background.png);
+}
+
+@media (min-width: 1100px) {
+    header {
+        display: block;
+        position: static;
+        height: 243px;
+    }
+}
+
 .top {
     display: none;
 }
+
+@media (min-width: 1100px) {
+    .top {
+        display: block;
+        height: 37px;
+        font-size: 11px;
+        color: var(--alt-font-color);
+        background: #333333;
+    }
+    .top__container {
+        max-width: var(--max-width-desktop);
+        height: 100%;
+        margin: auto;
+    }
+    .top__container>div {
+        display: inline;
+        line-height: 34px;
+        margin: 5px 11px;
+    }
+    .top__icon {
+        color: var(--main-red);
+        margin: 5px;
+    }
+    .top__anchor {
+        color: var(--alt-font-color);
+    }
+    .top__anchor:hover {
+        color: var(--main-red);
+    }
+    .top__tel-name::after,
+    .top__mail-name::after {
+        content: ':';
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+}
+
+@media (min-width: 1100px) {}
 
 .logo {
     padding: 10px;
@@ -41,20 +112,6 @@ a {
 
 .logo__pic {
     max-width: 100%;
-}
-
-i {
-    font-style: normal;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-i:hover {
-    color: #ce2e2a;
-}
-
-i:hover::before {
-    color: #ce2e2a;
 }
 
 form {
@@ -123,7 +180,7 @@ form {
 }
 
 .basket__icon:hover::before {
-    color: #ce2e2a;
+    color: var(--main-red);
 }
 
 .hamburger {
@@ -216,7 +273,7 @@ ul {
 .collapisble_icon.rotated::after,
 .question__arrow-icon--rotated {
     transform: rotate(-180deg);
-    color: #ce2e2a;
+    color: var(--main-red);
 }
 
 li>button {
@@ -357,7 +414,7 @@ footer {
 }
 
 .product_versions>div:hover {
-    border-color: #ce2e2a;
+    border-color: var(--main-red);
 }
 
 .product_versions>div>a {
@@ -409,7 +466,7 @@ select {
 
 .price {
     flex-grow: 2;
-    color: #ce2e2a;
+    color: var(--main-red);
     font-size: 2.5em;
 }
 
@@ -472,7 +529,7 @@ select {
 }
 
 .benefit a {
-    color: #ce2e2a;
+    color: var(--main-red);
     text-transform: uppercase;
 }
 
@@ -549,7 +606,7 @@ select {
 
 .product_price {
     margin: 0;
-    color: #ce2e2a
+    color: var(--main-red)
 }
 
 .description__text {
@@ -571,7 +628,7 @@ select {
 }
 
 .questions__question-title:hover {
-    color: #ce2e2a;
+    color: var(--main-red);
 }
 
 .questions__question-text {
@@ -630,7 +687,7 @@ select {
 }
 
 .params__parameter-value:hover {
-    color: #ce2e2a;
+    color: var(--main-red);
 }
 
 .separator {

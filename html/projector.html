@@ -17,206 +17,224 @@
     <header>
         <div class="top">
             <!-- niewidoczne na mobile -->
-        </div>
-        <div class="logo">
-            <a href="" class="logo__link">
-                <img src="../gfx/logo.png" class="logo__pic" alt="Logotyp sklepu Assassins">
-            </a>
-        </div>
-        <form class="search">
-            <i class="search__icon search__icon--mobile"></i>
-            <div class="search__container">
-                <input class="search__input" type="text" placeholder="  Wpisz czego szukasz...">
-                <div class="search__close-container">
-                    <i class="close-icon"></i>
+            <div class="top__container">
+                <div class="top__tel">
+                    <i class="tel-icon top__icon fas fa-phone-alt"></i>
+                    <span class="top__tel-name">Tel</span>
+                    <a href="tel:+ 48 517 989 511" class="top__tel-number top__anchor">+ 48 517 989 511</a>
+                </div>
+                <div class="top__mail">
+                    <i class="mail-icon top__icon fas fa-envelope"></i>
+                    <span class="top__mail-name">E-mail</span>
+                    <a href="mailto:sklep@assassins-arms.com" class="top__mail-address top__anchor">sklep@assassins-arms.com</a>
+                </div>
+                <div class="top__facebook">
+                    <i class="facebook-icon top__icon fab fa-facebook-f"></i>
+                    <a href="https://www.facebook.com/AssassinsArms/" class="top__facebook-address top__anchor">assassinsarms</a>
                 </div>
             </div>
-            <!-- klasa będzie zmieniała się tylko na mobile -->
-            <button type="submit">
+        </div>
+        <div class="main-container">
+            <div class="logo">
+                <a href="" class="logo__link">
+                    <img src="../gfx/logo.png" class="logo__pic" alt="Logotyp sklepu Assassins">
+                </a>
+            </div>
+            <form class="search">
+                <i class="search__icon search__icon--mobile"></i>
+                <div class="search__container">
+                    <input class="search__input" type="text" placeholder="  Wpisz czego szukasz...">
+                    <div class="search__close-container">
+                        <i class="close-icon"></i>
+                    </div>
+                </div>
+                <!-- klasa będzie zmieniała się tylko na mobile -->
+                <button type="submit">
+                    <!-- niewidoczne na desktop -->
+                    <i class="search__icon"></i>
+                </button>
+            </form>
+            <div class="login-desktop">
+                <!-- niewidoczne na mobile -->
+                Twoje konto
+            </div>
+            <div class="basket">
+                <a href="" class="basket__icon"></a>
+            </div>
+            <div class="hamburger">
                 <!-- niewidoczne na desktop -->
-                <i class="search__icon"></i>
-            </button>
-        </form>
-        <div class="login-desktop">
-            <!-- niewidoczne na mobile -->
-            Twoje konto
+                <i class="hamburger__icon"></i>
+            </div>
+            <nav class="navigation-mobile">
+                <!-- niewidoczne na desktop -->
+                <ul class="menu1">
+                    <li class="lvl1">
+                        <button>
+                            <a href="">Gotowe zestawy do gry</a>
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Podkategoria 1</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 2</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 3</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            <a href="">Sprzęt</a>
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Podkategoria 1</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 2</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 3</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            <a href="">Odzież</a>
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Podkategoria 1</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 2</button>
+                            </li>
+                            <li>
+                                <button>Podkategoria 3</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            <a href="">Kulki</a>
+                        </button>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            <a href="">Wyprzedaże</a>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="">
+                    <li class="lvl1">
+                        <button>
+                            Moje konto
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Zarejestruj się</button>
+                            </li>
+                            <li>
+                                <button>Zaloguj</button>
+                            </li>
+                            <li>
+                                <button>Koszyk</button>
+                            </li>
+                            <li>
+                                <button>Ulubione</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            Moje zamówienia
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Sprawdź status zamówienia</button>
+                            </li>
+                            <li>
+                                <button>Śledź przesyłkę</button>
+                            </li>
+                            <li>
+                                <button>Reklamacje</button>
+                            </li>
+                            <li>
+                                <button>Zwroty</button>
+                            </li>
+                            <li>
+                                <button>Informacje o wymianie</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1">
+                        <button>
+                            Informacje o sklepie
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>Dane sklepu</button>
+                            </li>
+                            <li>
+                                <button>Wysyłka</button>
+                            </li>
+                            <li>
+                                <button>Regulamin</button>
+                            </li>
+                            <li>
+                                <button>Polityka prywatności</button>
+                            </li>
+                            <li>
+                                <button>Odstąpienie od ummowy</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1 contact">
+                        <button>
+                            Kontakt
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li>
+                                <button>+48 574 046 421</button>
+                                <i class="tel_icon"></i>
+                            </li>
+                            <li>
+                                <button>kontakt@assasinarmy.pl</button>
+                                <i class="mail_icon"></i>
+                            </li>
+                            <li>
+                                <button>Facebook</button>
+                                <i class="fb_icon"></i>
+                            </li>
+                            <li>
+                                <button>Instagram</button>
+                                <i class="ig_icon"></i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="lvl1 language">
+                        <button>
+                            Język i waluta:
+                            <span class="polski"></span>
+                            <span class="pln">PLN</span>
+                            <i class="collapisble_icon"></i>
+                        </button>
+                        <ul class="collapsible">
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="basket">
-            <a href="" class="basket__icon"></a>
-        </div>
-        <div class="hamburger">
-            <!-- niewidoczne na desktop -->
-            <i class="hamburger__icon"></i>
-        </div>
-        <nav class="navigation-mobile">
-            <!-- niewidoczne na desktop -->
-            <ul class="menu1">
-                <li class="lvl1">
-                    <button>
-                        <a href="">Gotowe zestawy do gry</a>
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Podkategoria 1</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 2</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 3</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        <a href="">Sprzęt</a>
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Podkategoria 1</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 2</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 3</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        <a href="">Odzież</a>
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Podkategoria 1</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 2</button>
-                        </li>
-                        <li>
-                            <button>Podkategoria 3</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        <a href="">Kulki</a>
-                    </button>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        <a href="">Wyprzedaże</a>
-                    </button>
-                </li>
-            </ul>
-            <ul class="">
-                <li class="lvl1">
-                    <button>
-                        Moje konto
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Zarejestruj się</button>
-                        </li>
-                        <li>
-                            <button>Zaloguj</button>
-                        </li>
-                        <li>
-                            <button>Koszyk</button>
-                        </li>
-                        <li>
-                            <button>Ulubione</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        Moje zamówienia
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Sprawdź status zamówienia</button>
-                        </li>
-                        <li>
-                            <button>Śledź przesyłkę</button>
-                        </li>
-                        <li>
-                            <button>Reklamacje</button>
-                        </li>
-                        <li>
-                            <button>Zwroty</button>
-                        </li>
-                        <li>
-                            <button>Informacje o wymianie</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1">
-                    <button>
-                        Informacje o sklepie
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>Dane sklepu</button>
-                        </li>
-                        <li>
-                            <button>Wysyłka</button>
-                        </li>
-                        <li>
-                            <button>Regulamin</button>
-                        </li>
-                        <li>
-                            <button>Polityka prywatności</button>
-                        </li>
-                        <li>
-                            <button>Odstąpienie od ummowy</button>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1 contact">
-                    <button>
-                        Kontakt
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li>
-                            <button>+48 574 046 421</button>
-                            <i class="tel_icon"></i>
-                        </li>
-                        <li>
-                            <button>kontakt@assasinarmy.pl</button>
-                            <i class="mail_icon"></i>
-                        </li>
-                        <li>
-                            <button>Facebook</button>
-                            <i class="fb_icon"></i>
-                        </li>
-                        <li>
-                            <button>Instagram</button>
-                            <i class="ig_icon"></i>
-                        </li>
-                    </ul>
-                </li>
-                <li class="lvl1 language">
-                    <button>
-                        Język i waluta:
-                        <span class="polski"></span>
-                        <span class="pln">PLN</span>
-                        <i class="collapisble_icon"></i>
-                    </button>
-                    <ul class="collapsible">
-                        <li></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
         <nav class="nav_desktop">
             <ul>
                 <li></li>
