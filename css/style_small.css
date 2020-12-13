@@ -10,24 +10,34 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body,
+button,
+input,
+textarea,
+select {
     margin: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.3;
-    color: #333333;
-    background: #ffffff;
+    color: var(--main-font-color);
     text-align: justify;
     font-family: "Montserrat", sans-serif;
     hyphens: auto;
 }
 
-a {
-    text-decoration: none;
-    color: #333333;
+button {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-i:not(.top__icon) {
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+i:not(.top__icon),
+.layout__icon {
     /* naprawić to!!! nadać osobne klasy layout__icon */
     font-style: normal;
     font-size: 1.5em;
@@ -51,11 +61,11 @@ header {
     background: #eaeaea url(../gfx/header_background.png);
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     header {
         display: block;
         position: static;
-        height: 243px;
+        height: 228px;
     }
 }
 
@@ -63,7 +73,7 @@ header {
     display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     .top {
         display: block;
         height: 37px;
@@ -105,13 +115,15 @@ header {
     margin: 0 auto;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     .main-container {
         display: flex;
+        height: 92px;
     }
 }
 
 .logo {
+    height: 40px;
     padding: 10px;
 }
 
@@ -131,7 +143,7 @@ form {
     display: none;
 }
 
-@media (max-width:1100px) {
+@media (max-width:950px) {
     .search__container--active {
         position: fixed;
         top: 0;
@@ -157,7 +169,7 @@ form {
     padding-left: 11px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     .search__icon--mobile {
         display: none;
     }
@@ -179,6 +191,7 @@ form {
         border: none;
         background: var(--main-font-color);
         font-size: 0.7em;
+        text-align: center;
     }
     .search__icon {
         color: #ffffff;
@@ -206,10 +219,11 @@ form {
     display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     .login-desktop {
         display: flex;
         align-items: center;
+        margin-right: 18px;
     }
     .login-desktop__menu {
         display: flex;
@@ -225,6 +239,7 @@ form {
         background: url("../gfx/flag_pl.png");
     }
     .login-desktop__account {
+        font-size: 13px;
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -233,16 +248,71 @@ form {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
     .basket {
         padding: 10px;
     }
+    .basket__container {
+        display: none;
+    }
 }
 
-@media (min-width: 1100px) {
-    .basket {}
+@media (min-width: 950px) {
+    .basket {
+        position: relative;
+        margin-right: 15px;
+    }
+    .basket::before {
+        position: absolute;
+        content: '';
+        top: -60px;
+        right: -15px;
+        width: 185px;
+        height: 156px;
+        z-index: 1;
+        background: url(../gfx/basket_background.png);
+    }
+    .basket__container {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        width: 150px;
+        z-index: 2;
+    }
     .basket__icon {
         display: none;
+    }
+    .basket__pic-container {
+        position: relative;
+    }
+    .basket__dot {
+        position: absolute;
+        bottom: 80%;
+        left: 60%;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        padding: 5px;
+        background: #ffffff;
+        line-height: 11px;
+        text-align: center;
+        font-size: 11px;
+        color: var(--main-red);
+    }
+    .basket__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--alt-font-color);
+        cursor: pointer;
+    }
+    .basket__your-basket {
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .basket__basket-value {
+        font-size: 1.25em;
     }
 }
 
@@ -250,21 +320,13 @@ form {
     padding: 10px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 950px) {
     .hamburger {
         display: none;
     }
 }
 
-.breadcrumbs {
-    display: none;
-}
-
-.nav_desktop {
-    display: none;
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
     .navigation-mobile {
         position: absolute;
         top: 100%;
@@ -274,22 +336,37 @@ form {
         box-sizing: border-box;
         height: auto;
         transition: all 0.3s ease-in-out;
-        z-index: 1000;
+        z-index: 1;
         opacity: 0;
     }
     .navigation-mobile.open {
         transform: translateX(0px);
         opacity: 1;
     }
+    .navigation-mobile>ul>li {
+        width: 100%;
+        box-sizing: border-box;
+        border-style: solid;
+        border-width: 1px 0px 0px 0px;
+    }
+    .navigation-mobile>ul>li:last-of-type {
+        border-width: 1px 0px 0px 0px;
+    }
+    .menu1>li>button {
+        background: #dbdbdb;
+    }
+    .lvl1>button:hover {
+        background: #eaeaea;
+    }
 }
 
-@media (min-width: 1100px) {
-    .navigation-mobile {
-        display: flex;
-    }
-    .menu2 {
-        display: none;
-    }
+li>button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    background: #bebebe;
 }
 
 ul {
@@ -298,36 +375,12 @@ ul {
     list-style: none;
 }
 
-.navigation-mobile>ul>li {
-    width: 100%;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 1px 0px 0px 0px;
-}
-
-.lvl1>button:hover {
-    background: #eaeaea;
-}
-
 .collapsible>li>button:hover {
     background: #eaeaea;
 }
 
 .menu1>li:first-of-type {
     border: none;
-}
-
-.navigation-mobile>ul>li:last-of-type {
-    border-width: 1px 0px 0px 0px;
-}
-
-.menu1>li>button {
-    width: 100%;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    background: #dbdbdb;
 }
 
 .collapisble_icon::after,
@@ -345,15 +398,6 @@ ul {
     color: var(--main-red);
 }
 
-li>button {
-    width: 100%;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    background: #bebebe;
-}
-
 .collapsible {
     display: none;
 }
@@ -368,8 +412,90 @@ li>button {
     background: url("../gfx/flag_pl.png");
 }
 
+@media (min-width: 950px) {
+    .navigation-mobile {
+        height: 62px;
+        background: #ffffff;
+    }
+    .menu1 {
+        display: flex;
+        align-content: center;
+        margin: 0 auto;
+        max-width: var(--max-width-desktop);
+        height: 100%;
+    }
+    li.lvl1 {
+        margin-left: 11px;
+    }
+    button.lvl1 {
+        height: 100%;
+        padding: 0 5px;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+    button.lvl1:hover {
+        border-bottom: 2px solid var(--main-red);
+    }
+    button.lvl1>a,
+    button.lvl1>i::after {
+        margin-right: 11px;
+    }
+    .lvl1 {
+        width: auto;
+        font-size: 13px;
+        font-weight: bold;
+        background: #ffffff;
+    }
+    .collapsible {
+        position: absolute;
+        width: 250px;
+        z-index: 1;
+    }
+    button.lvl2 {
+        width: 100%;
+        background: #eaeaea;
+    }
+    .menu2 {
+        display: none;
+    }
+}
+
+.breadcrumbs {
+    display: none;
+}
+
+@media (min-width: 950px) {
+    .breadcrumbs {
+        display: block;
+        height: 38px;
+    }
+    .breadcrumbs__container {
+        max-width: var(--max-width-desktop);
+        margin: auto;
+    }
+    .breadcrumbs__list {
+        margin: 0 11px;
+        line-height: 38px;
+    }
+    .breadcrumbs__item {
+        display: inline;
+    }
+    .breadcrumbs__name:hover {
+        color: var(--main-red);
+    }
+    .breadcrumbs__item::after {
+        content: '>>';
+    }
+    .breadcrumbs__item--active {
+        font-weight: bold;
+    }
+    .breadcrumbs__item--active::after {
+        content: none;
+    }
+}
+
 .layout {
-    padding: 0 11px 0 11px;
+    padding: 0 11px;
     transition: all 1s ease;
 }
 
@@ -384,7 +510,7 @@ li>button {
 .gallery_mobile {
     position: relative;
     max-width: var(--max-width-mobile);
-    margin: 15px auto 11px auto;
+    margin: 15px auto;
     z-index: 0;
 }
 

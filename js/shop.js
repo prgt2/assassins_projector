@@ -14,7 +14,7 @@
     function hideAll() {
         $('.navigation-mobile').toggleClass('open')
         $('.layout').toggleClass('open')
-        $('.collapsible').hide('fast')
+        $('.collapsible').slideUp('fast')
         $('.collapisble_icon').removeClass('rotated')
     }
 
@@ -23,6 +23,8 @@
     })
 
     $('.layout').on('click', function() {
+        $('.collapsible').slideUp('fast')
+        $('.collapisble_icon').removeClass('rotated')
         if ($('.navigation-mobile').hasClass('open')) {
             hideAll()
         }
@@ -111,7 +113,7 @@
 
     /* ukrywanie pytań */
     $('.questions__question-text:not(.questions__question-text--open)')
-        .slideDown('fast')
+        .slideUp('fast')
     $('.questions__question').click(function() {
         $(this).siblings('.questions__question--open')
             .toggleClass('questions__question--open')
