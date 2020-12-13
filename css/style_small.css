@@ -104,7 +104,11 @@ header {
     margin: 0 auto;
 }
 
-@media (min-width: 1100px) {}
+@media (min-width: 1100px) {
+    .main-container {
+        display: flex;
+    }
+}
 
 .logo {
     padding: 10px;
@@ -118,34 +122,66 @@ form {
     padding: 10px;
 }
 
-.search__icon::before {
-    content: "\f002";
-    font-family: FontAwesome;
-    color: #333333;
-}
-
 .search__container {
     display: none;
 }
 
-.search__container--active {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: auto;
-    height: 67px;
-    padding: 7px 10px;
-    display: flex;
-    justify-content: space-between;
-    background: #ffffff;
+.search__submit {
+    display: none;
+}
+
+@media (max-width:1100px) {
+    .search__container--active {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: auto;
+        height: 67px;
+        padding: 7px 10px;
+        display: flex;
+        justify-content: space-between;
+        background: #ffffff;
+    }
 }
 
 .search__input {
     height: 46px;
     width: 100%;
     padding: 0;
+}
+
+.search__input[type='text'] {
+    padding-left: 11px;
+}
+
+@media (min-width: 1100px) {
+    .search__icon--mobile {
+        display: none;
+    }
+    .search__container {
+        display: flex;
+        align-items: center;
+        width: 300px;
+    }
+    .search__input {
+        border: none;
+    }
+    .search__close-container {
+        display: none;
+    }
+    .search__submit {
+        display: block;
+        width: 46px;
+        height: 46px;
+        border: none;
+        background: var(--main-font-color);
+        font-size: 0.7em;
+    }
+    .search__icon {
+        color: #ffffff;
+    }
 }
 
 .search__close-container {
@@ -157,11 +193,8 @@ form {
     cursor: pointer;
 }
 
-.close-icon::before {
-    content: "\f00d";
-    font-family: FontAwesome;
-    text-decoration: none;
-    color: #ffffff;
+.search__close-icon {
+    line-height: 48px;
 }
 
 .search>button {
@@ -205,22 +238,32 @@ form {
     display: none;
 }
 
-.navigation-mobile {
-    position: absolute;
-    top: 100%;
-    transform: translateX(-250px);
-    width: 250px;
-    height: 100vh;
-    box-sizing: border-box;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-    opacity: 0;
+@media (max-width: 1100px) {
+    .navigation-mobile {
+        position: absolute;
+        top: 100%;
+        transform: translateX(-250px);
+        width: 250px;
+        height: 100vh;
+        box-sizing: border-box;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+        opacity: 0;
+    }
+    .navigation-mobile.open {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
-.navigation-mobile.open {
-    transform: translateX(0px);
-    opacity: 1;
+@media (min-width: 1100px) {
+    .navigation-mobile {
+        display: flex;
+    }
+    .menu2 {
+        display: none;
+    }
 }
 
 ul {

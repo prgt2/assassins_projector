@@ -41,18 +41,18 @@
                 </a>
             </div>
             <form class="search">
-                <i class="search__icon search__icon--mobile"></i>
+                <i class="search__icon search__icon--mobile layout__icon fas fa-search"></i>
                 <div class="search__container">
-                    <input class="search__input" type="text" placeholder="  Wpisz czego szukasz...">
+                    <input class="search__input" type="text" placeholder="Wpisz czego szukasz...">
                     <div class="search__close-container">
-                        <i class="close-icon"></i>
+                        <i class="search__close-icon layout__icon fas fa-times"></i>
                     </div>
+                    <button type="search" class="search__submit">
+                        <!-- niewidoczne na desktop -->
+                        <i class="search__icon layout__icon fas fa-search"></i>
+                    </button>
                 </div>
                 <!-- klasa będzie zmieniała się tylko na mobile -->
-                <button type="submit">
-                    <!-- niewidoczne na desktop -->
-                    <i class="search__icon"></i>
-                </button>
             </form>
             <div class="login-desktop">
                 <!-- niewidoczne na mobile -->
@@ -130,7 +130,7 @@
                         </button>
                     </li>
                 </ul>
-                <ul class="">
+                <ul class="menu2">
                     <li class="lvl1">
                         <button>
                             Moje konto

@@ -5,7 +5,7 @@
                 .toggleClass('search__container--active')
         })
         /* chowanie wyszukiwarki */
-    $('.close_cont').on('click', () => {
+    $('.search__close-container').on('click', () => {
             $('.search__container--active')
                 .toggleClass('search__container--active')
         })
