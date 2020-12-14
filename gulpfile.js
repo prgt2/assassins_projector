@@ -1,37 +1,45 @@
-var gulp = require('gulp')
-var uglify = require('gulp-uglify')
-var pipeline = require('readable-stream').pipeline
-var csso = require('gulp-csso')
-var autoprefixer = require('gulp-autoprefixer')
-var htmlmin = require('gulp-htmlmin')
-var browserSync = require('browser-sync').create()
-var reload = browserSync.reload
+let gulp = require('gulp')
+let terser = require('gulp-terser')
+let pipeline = require('readable-stream').pipeline
+let csso = require('gulp-csso')
+let htmlmin = require('gulp-htmlmin')
+let copy = require('gulp-copy')
+    /* let autoprefixer = require('autoprefixer')
+    let postcss = require('gulp-postcss') */
 
-gulp.task('compress', function() {
-    return pipeline(
-        gulp.src('./js/*.js'),
-        uglify(),
-        gulp.dest('./')
-    )
-})
+let jsPath = './js/*.js'
+let cssPath = './css/*.css'
+let htmlPath = './html/*.html'
+let gfxPath = './gfx/**'
 
-gulp.task('styles', function() {
-    return gulp.src('./css/*.css')
+
+function styles() {
+    return gulp.src(cssPath)
         .pipe(csso())
-        .pipe(gulp.dest('./css'))
-})
+        .pipe(gulp.dest('production/css'))
+}
 
-gulp.task('scripts', function() {
-    return gulp.src('./js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./js'))
-})
+function scripts() {
+    return gulp.src(jsPath)
+        .pipe(terser())
+        .pipe(gulp.dest('production/js'))
+}
 
-gulp.task('pages', function() {
-    return gulp.src(['./html/*.html'])
+function pages() {
+    return gulp.src([htmlPath])
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
         }))
-        .pipe(gulp.dest('./html'))
-})
+        .pipe(gulp.dest('production/html'))
+}
+
+function copyGfx() {
+    return gulp.src(gfxPath)
+        .pipe(gulp.dest('production/gfx'))
+}
+
+exports.styles = styles;
+exports.scripts = scripts;
+exports.pages = pages;
+exports.copyGfx = copyGfx;
