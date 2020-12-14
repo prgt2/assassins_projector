@@ -904,6 +904,7 @@ select {
 .hints__hint {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .hints__hint-title {
